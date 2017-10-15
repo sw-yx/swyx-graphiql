@@ -1,6 +1,6 @@
 {
   "name": "graphiql",
-  "version": "0.11.5",
+  "version": "0.11.6",
   "description": "An graphical interactive in-browser GraphQL IDE.",
   "contributors": [
     "Hyohyeon Jeong <asiandrummer@fb.com>",
@@ -36,15 +36,12 @@
     "check": "flow check",
     "dev": "babel-node test/server.js",
     "lint": "eslint src",
-    "lint-check":
-      "eslint --print-config .eslintrc | eslint-config-prettier-check",
+    "lint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check",
     "oldprecommit": "npm run testonly && lint-staged",
     "oldprepublish": ". ./resources/prepublish.sh",
     "preversion": ". ./resources/checkgit.sh && npm test",
-    "test":
-      "npm run lint && npm run check && npm run testonly && npm run build",
-    "testonly":
-      "babel-node ./node_modules/.bin/_mocha $npm_package_options_mocha"
+    "test": "npm run lint && npm run check && npm run testonly && npm run build",
+    "testonly": "babel-node ./node_modules/.bin/_mocha $npm_package_options_mocha"
   },
   "lint-staged": {
     "*.js": [
